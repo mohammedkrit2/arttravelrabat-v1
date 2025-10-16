@@ -22,7 +22,7 @@
     .brand .logo-square{width:38px;height:38px;border-radius:12px;background:var(--anthracite);display:grid;place-items:center;box-shadow:var(--shadow);color:var(--gold);font-weight:800}
     .brand b{color:#fff}
     .brand em{color:var(--gold);font-style:normal}
-    .menu{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+    .menu{display:flex;gap:26px;align-items:center}
     .menu a{color:#dbe2f1;font-weight:500;opacity:.9}
     .menu a:hover{opacity:1}
     .cta{background:var(--gold);color:#1b1b1b;font-weight:700;padding:10px 16px;border-radius:14px;box-shadow:var(--shadow)}
@@ -77,8 +77,24 @@
 
     /* Responsive */
     @media (max-width:1024px){.cards{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:repeat(3,1fr)}.about{grid-template-columns:1fr}.contact{grid-template-columns:1fr}}
-    @media (max-width:640px){.menu{display:none}.burger{display:block}.cards{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.testis{grid-template-columns:1fr}.hero-media{height:64vh}.nav{min-height:64px}.section-title{font-size:22px}.section-sub{font-size:14px}.btn{padding:10px 16px}.menu a{padding:8px 0;display:block}}.burger{display:block}.cards{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.testis{grid-template-columns:1fr}.hero-media{height:64vh}}
-  </style>
+    @media (max-width:640px){
+  .menu{display:none}
+  .menu.open{display:flex;flex-direction:column;gap:10px;position:absolute;left:0;right:0;top:100%;background:linear-gradient(0deg, rgba(15,23,42,.98), rgba(15,23,42,.98));border-bottom:1px solid rgba(255,255,255,.08);padding:14px 20px;z-index:39}
+  .menu a{padding:10px 0;display:block}
+  .burger{display:block}
+  .cards{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr 1fr}
+  .testis{grid-template-columns:1fr}
+  .hero-media{height:64vh}
+  .nav{min-height:64px}
+  .section-title{font-size:22px}
+  .section-sub{font-size:14px}
+  .btn{padding:10px 16px}
+}.burger{display:block}.cards{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.testis{grid-template-columns:1fr}.hero-media{height:64vh}.nav{min-height:64px}.section-title{font-size:22px}.section-sub{font-size:14px}.btn{padding:10px 16px}.menu a{padding:8px 0;display:block}}.burger{display:block}.cards{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.testis{grid-template-columns:1fr}.hero-media{height:64vh}}
+  .site-header{margin-bottom:0}
+.hero{margin-top:-6px}
+.about .photo img{display:block;width:100%;height:auto;object-fit:cover}
+</style>
 </head>
 <body>
   <!-- Header -->
@@ -247,10 +263,20 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const burger=document.getElementById('burger');
-    const menu=document.querySelector('.menu');
-    burger && burger.addEventListener('click',()=>{const open=getComputedStyle(menu).display!=='none';menu.style.display=open?'none':'flex';});
-  </script>
+  // Année auto
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // Menu mobile (classe .open)
+  const burger=document.getElementById('burger');
+  const menu=document.querySelector('.menu');
+  burger && burger.addEventListener('click',()=>{
+    menu.classList.toggle('open');
+  });
+  // Fermer القائمة عند الضغط خارجها
+  document.addEventListener('click',(e)=>{
+    if(menu && !menu.contains(e.target) && burger && !burger.contains(e.target)){
+      menu.classList.remove('open');
+    }
+  });
+</script>
 </body>
 </html>
