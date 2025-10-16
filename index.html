@@ -5,33 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Art Travel Rabat — Agence de voyages au Maroc</title>
   <meta name="description" content="Art Travel Rabat — Circuits au Maroc, escapades week‑end, hébergements, transport et guides locaux. Découvrez le Maroc autrement." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --anthracite:#1f2937; /* gris anthracite (bg principal) */
-      --night:#0f172a;      /* bleu nuit très foncé pour header collant */
-      --gold:#d4af37;       /* or (logo / accents) */
-      --sand:#f4efe6;       /* beige sable (fond sections claires) */
-      --ink:#0b1020;        /* texte sombre */
-      --muted:#64748b;      /* gris texte secondaire */
-      --radius:18px;
-      --shadow:0 10px 25px rgba(0,0,0,.08);
+      --anthracite:#1f2937; --night:#0f172a; --gold:#d4af37; --sand:#f4efe6; --ink:#0b1020; --muted:#64748b; --radius:18px; --shadow:0 10px 25px rgba(0,0,0,.08);
     }
     *{box-sizing:border-box}
     html,body{margin:0}
-    body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#0e1526;}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#0e1526;}
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
 
     /* Header */
     .site-header{position:sticky;top:0;z-index:40;background:linear-gradient(0deg, rgba(15,23,42,.8), rgba(15,23,42,.95));backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid rgba(255,255,255,.06)}
     .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
     .nav{display:flex;align-items:center;justify-content:space-between;min-height:70px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.5px}
-    .brand .logo-square{width:38px;height:38px;border-radius:12px;background:var(--anthracite);display:grid;place-items:center;box-shadow:var(--shadow)}
-    .brand .logo-square span{color:var(--gold);font-weight:800}
+    .brand .logo-square{width:38px;height:38px;border-radius:12px;background:var(--anthracite);display:grid;place-items:center;box-shadow:var(--shadow);color:var(--gold);font-weight:800}
     .brand b{color:#fff}
     .brand em{color:var(--gold);font-style:normal}
     .menu{display:flex;gap:26px;align-items:center}
@@ -42,8 +30,7 @@
 
     /* Hero */
     .hero{position:relative;overflow:hidden}
-    .hero-media{height:76vh;min-height:520px;border-radius:0 0 28px 28px;overflow:hidden;}
-    .hero-media img{width:100%;height:100%;object-fit:cover;filter:brightness(.78) saturate(1.05)}
+    .hero-media{height:76vh;min-height:520px;border-radius:0 0 28px 28px;overflow:hidden}
     .hero-inner{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px}
     .hero h1{font-size:clamp(28px,4.5vw,56px);line-height:1.05;margin:0;color:#fff;text-shadow:0 6px 30px rgba(0,0,0,.45)}
     .hero p{color:#e8edf7;max-width:740px;margin:14px auto 26px;font-weight:500}
@@ -58,7 +45,6 @@
     .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
     .card{background:var(--sand);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
     .card-figure{position:relative;height:210px}
-    .card-figure img{width:100%;height:100%;object-fit:cover}
     .badge{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.55);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px}
     .card-body{padding:16px}
     .card h3{margin:0 0 6px;font-size:18px;color:#1e293b}
@@ -89,24 +75,9 @@
     textarea{min-height:120px;resize:vertical}
     .contact .panel{background:#0f172a;border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:22px;color:#e5e7eb}
 
-    /* Footer */
-    footer{padding:34px 0;border-top:1px solid rgba(255,255,255,.08);color:#94a3b8}
-
     /* Responsive */
-    @media (max-width:1024px){
-      .cards{grid-template-columns:repeat(2,1fr)}
-      .services{grid-template-columns:repeat(3,1fr)}
-      .about{grid-template-columns:1fr}
-      .contact{grid-template-columns:1fr}
-    }
-    @media (max-width:640px){
-      .menu{display:none}
-      .burger{display:block}
-      .cards{grid-template-columns:1fr}
-      .services{grid-template-columns:1fr 1fr}
-      .testis{grid-template-columns:1fr}
-      .hero-media{height:64vh}
-    }
+    @media (max-width:1024px){.cards{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:repeat(3,1fr)}.about{grid-template-columns:1fr}.contact{grid-template-columns:1fr}}
+    @media (max-width:640px){.menu{display:none}.burger{display:block}.cards{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.testis{grid-template-columns:1fr}.hero-media{height:64vh}}
   </style>
 </head>
 <body>
@@ -114,10 +85,8 @@
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="#">
-        <div class="logo-square"><span>AR</span></div>
-        <div>
-          <b>AGENCE RABAT</b> <em>TRAVEL</em>
-        </div>
+        <div class="logo-square">AR</div>
+        <div><b>AGENCE RABAT</b> <em>TRAVEL</em></div>
       </a>
       <nav class="menu">
         <a href="#destinations">Destinations</a>
@@ -130,11 +99,10 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero (SVG inclus, aucun téléchargement externe) -->
   <section class="hero" aria-label="Héros">
     <div class="hero-media">
-      <!-- Remplacez l'image ci‑dessous par une photo réelle du Maroc (Chefchaouen / Sahara / Essaouira). -->
-      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%230ea5e9'/><stop offset='1' stop-color='%231e293b'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g)'/><text x='50%' y='50%' font-size='72' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>Chefchaouen</text><text x='50%' y='75%' font-size='24' text-anchor='middle' fill='%23e5e7eb'>Remplacez par une photo réelle</text></svg>" alt="Ruelles bleues de Chefchaouen" />
+      <img alt="Chefchaouen" style="width:100%;height:100%;object-fit:cover" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'><defs><linearGradient id='a' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%230ea5e9'/><stop offset='1' stop-color='%231e293b'/></linearGradient></defs><rect width='1600' height='900' fill='url(%23a)'/><g fill='white' opacity='.2'><circle cx='200' cy='200' r='90'/><circle cx='450' cy='180' r='60'/><circle cx='1200' cy='260' r='80'/></g><text x='50%' y='52%' text-anchor='middle' font-family='Arial' font-size='78' font-weight='700' fill='white'>Chefchaouen</text><text x='50%' y='78%' text-anchor='middle' font-family='Arial' font-size='26' fill='%23e5e7eb'>Ruelles bleues — Maroc</text></svg>" />
     </div>
     <div class="hero-inner">
       <div class="wrap">
@@ -145,7 +113,7 @@
     </div>
   </section>
 
-  <!-- Destinations -->
+  <!-- Destinations (SVGs inclus) -->
   <section id="destinations">
     <div class="wrap">
       <h2 class="section-title">Nos destinations phares</h2>
@@ -153,7 +121,7 @@
       <div class="cards">
         <article class="card">
           <div class="card-figure">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23b45309'/><stop offset='1' stop-color='%231b263b'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g)'/><text x='50%' y='55%' font-size='60' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>Marrakech</text><text x='50%' y='78%' font-size='22' text-anchor='middle' fill='%23e5e7eb'>Image de démo</text></svg>" alt="Marrakech" />
+            <img alt="Marrakech" style="width:100%;height:100%;object-fit:cover" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 900'><defs><linearGradient id='m' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23b45309'/><stop offset='1' stop-color='%231b263b'/></linearGradient></defs><rect width='1400' height='900' fill='url(%23m)'/><g fill='white' opacity='.18'><rect x='150' y='520' width='180' height='180' rx='12'/><rect x='360' y='480' width='220' height='220' rx='12'/><rect x='600' y='500' width='260' height='200' rx='12'/></g><text x='50%' y='55%' text-anchor='middle' font-family='Arial' font-size='60' font-weight='700' fill='white'>Marrakech</text><text x='50%' y='80%' text-anchor='middle' font-family='Arial' font-size='22' fill='%23fef3c7'>Ville ocre — Souks & jardins</text></svg>" />
             <span class="badge">Marrakech</span>
           </div>
           <div class="card-body">
@@ -163,7 +131,7 @@
         </article>
         <article class="card">
           <div class="card-figure">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%230ea5e9'/><stop offset='1' stop-color='%231e293b'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g)'/><text x='50%' y='55%' font-size='60' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>Chefchaouen</text><text x='50%' y='78%' font-size='22' text-anchor='middle' fill='%23e5e7eb'>Image de démo</text></svg>" alt="Chefchaouen" />
+            <img alt="Chefchaouen" style="width:100%;height:100%;object-fit:cover" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 900'><defs><linearGradient id='c' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%230ea5e9'/><stop offset='1' stop-color='%231e293b'/></linearGradient></defs><rect width='1400' height='900' fill='url(%23c)'/><g fill='white' opacity='.2'><circle cx='300' cy='600' r='60'/><circle cx='480' cy='560' r='40'/><circle cx='900' cy='620' r='70'/></g><text x='50%' y='58%' text-anchor='middle' font-family='Arial' font-size='60' font-weight='700' fill='white'>Chefchaouen</text><text x='50%' y='82%' text-anchor='middle' font-family='Arial' font-size='22' fill='%23e5e7eb'>Rif — Ruelles bleues</text></svg>" />
             <span class="badge">Chefchaouen</span>
           </div>
           <div class="card-body">
@@ -173,7 +141,7 @@
         </article>
         <article class="card">
           <div class="card-figure">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f59e0b'/><stop offset='1' stop-color='%237a4e0b'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g)'/><text x='50%' y='55%' font-size='60' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>Sahara</text><text x='50%' y='78%' font-size='22' text-anchor='middle' fill='%23fde68a'>Image de démo</text></svg>" alt="Sahara" />
+            <img alt="Sahara" style="width:100%;height:100%;object-fit:cover" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 900'><defs><linearGradient id='s' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f59e0b'/><stop offset='1' stop-color='%237a4e0b'/></linearGradient></defs><rect width='1400' height='900' fill='url(%23s)'/><path d='M0 620 C 200 540, 400 700, 700 640 C 960 590, 1180 700, 1400 620 L 1400 900 L 0 900 Z' fill='%23fde68a' opacity='.6'/><text x='50%' y='58%' text-anchor='middle' font-family='Arial' font-size='60' font-weight='700' fill='white'>Sahara</text><text x='50%' y='82%' text-anchor='middle' font-family='Arial' font-size='22' fill='%23fff7ed'>Merzouga — Dunes</text></svg>" />
             <span class="badge">Sahara</span>
           </div>
           <div class="card-body">
@@ -183,7 +151,7 @@
         </article>
         <article class="card">
           <div class="card-figure">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2310b981'/><stop offset='1' stop-color='%230b1020'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g)'/><text x='50%' y='55%' font-size='60' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>Essaouira</text><text x='50%' y='78%' font-size='22' text-anchor='middle' fill='%23e5e7eb'>Image de démo</text></svg>" alt="Essaouira" />
+            <img alt="Essaouira" style="width:100%;height:100%;object-fit:cover" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 900'><defs><linearGradient id='e' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2310b981'/><stop offset='1' stop-color='%230b1020'/></linearGradient></defs><rect width='1400' height='900' fill='url(%23e)'/><path d='M0 650 C 260 620, 520 700, 820 660 C 1100 620, 1260 700, 1400 670 L 1400 900 L 0 900 Z' fill='%23e0f2fe' opacity='.65'/><text x='50%' y='58%' text-anchor='middle' font-family='Arial' font-size='60' font-weight='700' fill='white'>Essaouira</text><text x='50%' y='82%' text-anchor='middle' font-family='Arial' font-size='22' fill='%23e5e7eb'>Océan — Médina & surf</text></svg>" />
             <span class="badge">Essaouira</span>
           </div>
           <div class="card-body">
@@ -224,7 +192,7 @@
         <a class="btn" href="#contact">Obtenir un devis</a>
       </div>
       <div class="photo">
-        <img src="https://images.unsplash.com/photo-1519737156937-1c12626e88c2?q=80&w=1400&auto=format&fit=crop" alt="Equipe de l'agence de voyage" />
+        <img alt="Equipe" style="width:100%;height:100%;object-fit:cover" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 900'><defs><linearGradient id='t' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23eab308'/><stop offset='1' stop-color='%230b1020'/></linearGradient></defs><rect width='1400' height='900' fill='url(%23t)'/><text x='50%' y='55%' text-anchor='middle' font-family='Arial' font-size='48' font-weight='700' fill='white'>Notre équipe & partenaires</text></svg>" />
       </div>
     </div>
   </section>
@@ -265,7 +233,7 @@
           <a href="#" style="color:var(--gold)">Facebook</a> ·
           <a href="#" style="color:var(--gold)">WhatsApp</a>
         </p>
-        <p style="color:#94a3b8;font-size:14px">ⓘ Remplacez les visuels par vos propres photos réelles (Marrakech, Chefchaouen, Sahara, Essaouira, Rabat) pour renforcer la crédibilité.</p>
+        <p style="color:#94a3b8;font-size:14px">ⓘ Visuels intégrés en SVG (hors‑ligne). Nous pouvons remplacer par vos photos réelles (JPG/PNG) à tout moment.</p>
       </div>
     </div>
   </section>
@@ -278,15 +246,10 @@
   </footer>
 
   <script>
-    // Année automatique
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Menu mobile (simple)
     const burger=document.getElementById('burger');
     const menu=document.querySelector('.menu');
-    burger && burger.addEventListener('click',()=>{
-      const open=getComputedStyle(menu).display!=='none';
-      menu.style.display=open?'none':'flex';
-    });
+    burger && burger.addEventListener('click',()=>{const open=getComputedStyle(menu).display!=='none';menu.style.display=open?'none':'flex';});
   </script>
 </body>
 </html>
