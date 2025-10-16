@@ -90,10 +90,27 @@
   .section-title{font-size:22px}
   .section-sub{font-size:14px}
   .btn{padding:10px 16px}
+}
+  .menu.open{display:flex;flex-direction:column;gap:10px;position:absolute;left:0;right:0;top:100%;background:linear-gradient(0deg, rgba(15,23,42,.98), rgba(15,23,42,.98));border-bottom:1px solid rgba(255,255,255,.08);padding:14px 20px;z-index:39}
+  .menu a{padding:10px 0;display:block}
+  .burger{display:block}
+  .cards{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr 1fr}
+  .testis{grid-template-columns:1fr}
+  .hero-media{height:64vh}
+  .nav{min-height:64px}
+  .section-title{font-size:22px}
+  .section-sub{font-size:14px}
+  .btn{padding:10px 16px}
 }.burger{display:block}.cards{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.testis{grid-template-columns:1fr}.hero-media{height:64vh}.nav{min-height:64px}.section-title{font-size:22px}.section-sub{font-size:14px}.btn{padding:10px 16px}.menu a{padding:8px 0;display:block}}.burger{display:block}.cards{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.testis{grid-template-columns:1fr}.hero-media{height:64vh}}
   .site-header{margin-bottom:0}
 .hero{margin-top:-6px}
 .about .photo img{display:block;width:100%;height:auto;object-fit:cover}
+@media (min-width:641px){.burger{display:none!important}.menu{display:flex!important;position:static}}
+@media (min-width:1024px){.cards{grid-template-columns:repeat(4,1fr)!important}}
+.site-header{margin-bottom:0}
+.hero{margin-top:0;padding-top:0}
+.hero-media{margin-top:0}
 </style>
 </head>
 <body>
@@ -118,7 +135,7 @@
   <!-- Hero (SVG inclus, aucun téléchargement externe) -->
   <section class="hero" aria-label="Héros">
     <div class="hero-media">
-      <img alt="Chefchaouen" src="https://upload.wikimedia.org/wikipedia/commons/8/80/Chefchaouen%2C_the_blue_city.JPG" style="width:100%;height:100%;object-fit:cover" /><defs><linearGradient id='a' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%230ea5e9'/><stop offset='1' stop-color='%231e293b'/></linearGradient></defs><rect width='1600' height='900' fill='url(%23a)'/><g fill='white' opacity='.2'><circle cx='200' cy='200' r='90'/><circle cx='450' cy='180' r='60'/><circle cx='1200' cy='260' r='80'/></g><text x='50%' y='52%' text-anchor='middle' font-family='Arial' font-size='78' font-weight='700' fill='white'>Chefchaouen</text><text x='50%' y='78%' text-anchor='middle' font-family='Arial' font-size='26' fill='%23e5e7eb'>Ruelles bleues — Maroc</text></svg>" />
+      <img alt="Chefchaouen" src="https://upload.wikimedia.org/wikipedia/commons/8/80/Chefchaouen%2C_the_blue_city.JPG" style="width:100%;height:100%;object-fit:cover" />
     </div>
     <div class="hero-inner">
       <div class="wrap">
@@ -137,7 +154,7 @@
       <div class="cards">
         <article class="card">
           <div class="card-figure">
-            <img alt="Marrakech" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Marrakech_-_Place_Jemaa_el-Fna_-_Maroc_Morocco_-_Photo_Image_Photography_%289125451029%29.jpg" style="width:100%;height:100%;object-fit:cover" /><defs><linearGradient id='m' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23b45309'/><stop offset='1' stop-color='%231b263b'/></linearGradient></defs><rect width='1400' height='900' fill='url(%23m)'/><g fill='white' opacity='.18'><rect x='150' y='520' width='180' height='180' rx='12'/><rect x='360' y='480' width='220' height='220' rx='12'/><rect x='600' y='500' width='260' height='200' rx='12'/></g><text x='50%' y='55%' text-anchor='middle' font-family='Arial' font-size='60' font-weight='700' fill='white'>Marrakech</text><text x='50%' y='80%' text-anchor='middle' font-family='Arial' font-size='22' fill='%23fef3c7'>Ville ocre — Souks & jardins</text></svg>" />
+            <img alt="Marrakech" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Marrakech_-_Place_Jemaa_el-Fna_-_Maroc_Morocco_-_Photo_Image_Photography_%289125451029%29.jpg" style="width:100%;height:100%;object-fit:cover" />
             <span class="badge">Marrakech</span>
           </div>
           <div class="card-body">
@@ -147,7 +164,7 @@
         </article>
         <article class="card">
           <div class="card-figure">
-            <img alt="Chefchaouen" src="https://upload.wikimedia.org/wikipedia/commons/8/80/Chefchaouen%2C_the_blue_city.JPG" style="width:100%;height:100%;object-fit:cover" /><defs><linearGradient id='c' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%230ea5e9'/><stop offset='1' stop-color='%231e293b'/></linearGradient></defs><rect width='1400' height='900' fill='url(%23c)'/><g fill='white' opacity='.2'><circle cx='300' cy='600' r='60'/><circle cx='480' cy='560' r='40'/><circle cx='900' cy='620' r='70'/></g><text x='50%' y='58%' text-anchor='middle' font-family='Arial' font-size='60' font-weight='700' fill='white'>Chefchaouen</text><text x='50%' y='82%' text-anchor='middle' font-family='Arial' font-size='22' fill='%23e5e7eb'>Rif — Ruelles bleues</text></svg>" />
+            <img alt="Chefchaouen" src="https://upload.wikimedia.org/wikipedia/commons/8/80/Chefchaouen%2C_the_blue_city.JPG" style="width:100%;height:100%;object-fit:cover" />
             <span class="badge">Chefchaouen</span>
           </div>
           <div class="card-body">
@@ -157,7 +174,7 @@
         </article>
         <article class="card">
           <div class="card-figure">
-            <img alt="Sahara" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Dunes-Merzouga-Erg_Chebi.JPG" style="width:100%;height:100%;object-fit:cover" /><defs><linearGradient id='s' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f59e0b'/><stop offset='1' stop-color='%237a4e0b'/></linearGradient></defs><rect width='1400' height='900' fill='url(%23s)'/><path d='M0 620 C 200 540, 400 700, 700 640 C 960 590, 1180 700, 1400 620 L 1400 900 L 0 900 Z' fill='%23fde68a' opacity='.6'/><text x='50%' y='58%' text-anchor='middle' font-family='Arial' font-size='60' font-weight='700' fill='white'>Sahara</text></svg>" />
+            <img alt="Sahara" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Dunes-Merzouga-Erg_Chebi.JPG" style="width:100%;height:100%;object-fit:cover" />
             <span class="badge">Sahara</span>
           </div>
           <div class="card-body">
@@ -167,7 +184,7 @@
         </article>
         <article class="card">
           <div class="card-figure">
-            <img alt="Essaouira" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Ramparts_Essaouira.JPG" style="width:100%;height:100%;object-fit:cover" /><defs><linearGradient id='e' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2310b981'/><stop offset='1' stop-color='%230b1020'/></linearGradient></defs><rect width='1400' height='900' fill='url(%23e)'/><path d='M0 650 C 260 620, 520 700, 820 660 C 1100 620, 1260 700, 1400 670 L 1400 900 L 0 900 Z' fill='%23e0f2fe' opacity='.65'/><text x='50%' y='58%' text-anchor='middle' font-family='Arial' font-size='60' font-weight='700' fill='white'>Essaouira</text><text x='50%' y='82%' text-anchor='middle' font-family='Arial' font-size='22' fill='%23e5e7eb'>Océan — Médina & surf</text></svg>" />
+            <img alt="Essaouira" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Ramparts_Essaouira.JPG" style="width:100%;height:100%;object-fit:cover" />
             <span class="badge">Essaouira</span>
           </div>
           <div class="card-body">
@@ -208,7 +225,7 @@
         <a class="btn" href="#contact">Obtenir un devis</a>
       </div>
       <div class="photo">
-        <img$1 style="width:100%;height:auto;object-fit:cover"><defs><linearGradient id='t' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23eab308'/><stop offset='1' stop-color='%230b1020'/></linearGradient></defs><rect width='1400' height='900' fill='url(%23t)'/><text x='50%' y='55%' text-anchor='middle' font-family='Arial' font-size='48' font-weight='700' fill='white'>Notre équipe & partenaires</text></svg>" />
+        <img alt="Equipe de l'agence" src="https://images.unsplash.com/photo-1519737156937-1c12626e88c2?q=80&w=1400&auto=format&fit=crop" style="width:100%;height:auto;object-fit:cover" />
       </div>
     </div>
   </section>
